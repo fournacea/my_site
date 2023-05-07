@@ -11,16 +11,16 @@
 
 {% block content %}
     <header id="main-navigation">
-        <h1 style="text-align: center;">Blogger</h1>
+        <h1>Blogger</h1>
         <nav>
             <a href="">All Posts</a>
         </nav>
     </header>
-    <h1 style="text-align: center;">Welcome to my blog</h1>
+    <h1 style="text-align: center;">Welcome To My Blog</h1>
 
     <section id="welcome">
         <header>
-            <img src="" alt="Adam - Author Of This Blog">
+            <img src="{% static 'blog/images/coding.jpg' %}" alt="Adam - Author Of This Blog">
             <h2>Adam's Blog</h2>
         </header>
         <p>Hi, I'm Adam and I love to blog about technology, history, and the Bible</p>
@@ -33,7 +33,7 @@
             <li>
                 <article class="post">
                     <a href="">
-                        <img src="" alt="Mountian Hiking">
+                        <img src="{% static 'blog/images/woods.jpg' %}" width="640" height="360" alt="Mountian Hiking">
                         <div class="post__content">
                             <h3>Mountain Hiking</h3>
                             <p>There's nothing like the views in the mountains.

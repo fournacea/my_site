@@ -18,7 +18,7 @@
     object-fit: cover;
     object-position: top;
     border: 5px solid white;
-    border-radius: 12px;
+    border-radius: 20px;
     background-color: #ffe1bf;
     transform: rotateZ(-5deg);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
@@ -75,4 +75,11 @@
   #about p {
     font-size: 1.5rem;
     color: #353535;
+  }
+
+  .post a img{
+    width: 60%;
+    margin: auto;
+    display: block;
+    border-radius: 30px;
   }
