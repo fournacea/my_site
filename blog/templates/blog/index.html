@@ -6,42 +6,34 @@
 {% endblock title %}
 
 {% block css_files%}
-    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock css_files %}
 
 {% block content %}
-    <header id="main-navigation">
+    <!-- <header id="main-navigation">
         <h1>Blogger</h1>
         <nav>
             <a href="">All Posts</a>
         </nav>
-    </header>
-    <h1 style="text-align: center;">Welcome To My Blog</h1>
+    </header> -->
 
     <section id="welcome">
         <header>
-            <img src="{% static 'blog/images/coding.jpg' %}" alt="Adam - Author Of This Blog">
+            <img src="{% static 'blog/images/coding.jpg' %}" alt="Adam - Author of this blog">
             <h2>Adam's Blog</h2>
         </header>
-        <p>Hi, I'm Adam and I love to blog about technology, history, and the Bible</p>
+        <p>Hi, I am Adam and I love to blog about tech and politics!</p>
     </section>
+
 
     <section id="latest-posts">
         <h2>My Latest Thoughts</h2>
 
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="{% static 'blog/images/woods.jpg' %}" width="640" height="360" alt="Mountian Hiking">
-                        <div class="post__content">
-                            <h3>Mountain Hiking</h3>
-                            <p>There's nothing like the views in the mountains.
-                                And I wasn't even prepared for what happened whilst I enjoyed the view... </p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+            {% for post in posts %}
+                {% include 'blog/includes/post.html' %}
+            {%endfor %}
         </ul>
     </section>
 
