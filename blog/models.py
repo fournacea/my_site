@@ -8,6 +8,7 @@ class Tag(models.Model):
 
     def __str__(self):
        return self.caption 
+    
 
 class Author(models.Model):
     first_name = models.CharField(max_length=100)
@@ -19,6 +20,7 @@ class Author(models.Model):
 
     def __str__(self):
        return self.full_name() 
+    
 
 class Post(models.Model):
     title = models.CharField(max_length=150)
@@ -34,3 +36,10 @@ class Post(models.Model):
         related_name="posts"
         )
     tags = models.ManyToManyField(Tag)
+
+
+class Comment(models.Model):
+    user_name = models.CharField(max_length=120)
+    email = models.EmailField()
+    text = models.TextField(max_length=500)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
